@@ -1,5 +1,4 @@
 #include <iostream>
-
 #include "src/graphics/Window.h"
 
 int main() {
