@@ -1,6 +1,8 @@
 #pragma once
-#include <iostream>
+#include <GL/glew.h>
+#include <GL/GL.h>
 #include <GLFW/glfw3.h>
+#include <iostream>
 
 namespace MyEngine { namespace graphics {
 

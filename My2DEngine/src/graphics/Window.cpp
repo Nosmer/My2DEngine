@@ -15,18 +15,27 @@ namespace MyEngine { namespace graphics {
 	bool Window::init() {
 		//creating a GLFW window
 		if (!glfwInit()) {
-			std::cout << "ErrorAbort" << std::endl;
+			std::cout << "Failed to initialize GFWL" << std::endl;
 			return false;
 		}
 
 		m_Window = glfwCreateWindow(m_Width, m_Height, m_Title, NULL, NULL);
 		if (!m_Window) {
 			glfwTerminate();
-			std::cout << "Failed to create a window!" << std::endl;
+			std::cout << "Failed to create a window" << std::endl;
 			return false;
 		}
 		glfwMakeContextCurrent(m_Window);
 		glfwSetWindowSizeCallback(m_Window, windowResize);
+
+		//initializing GLEW
+		if (glewInit() != GLEW_OK) {
+			std::cout << "Failed to initialize GLEW" << std::endl;
+			return false;
+		}
+
+		std::cout << "OpenGL: " << glGetString(GL_VERSION) << std::endl;
+
 		return true;
 	}
 
