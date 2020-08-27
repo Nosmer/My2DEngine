@@ -21,9 +21,15 @@
     <ClCompile Include="src\graphics\Window.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
+    <ClCompile Include="src\math\vec2.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\graphics\Window.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="src\math\Vec2.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
   </ItemGroup>

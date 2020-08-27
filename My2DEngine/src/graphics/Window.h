@@ -4,7 +4,8 @@
 #include <GLFW/glfw3.h>
 #include <iostream>
 
-namespace MyEngine { namespace graphics {
+namespace MyEngine {
+	namespace graphics {
 #define MAX_KEYS	1024
 #define MAX_BUTTONS	32
 
