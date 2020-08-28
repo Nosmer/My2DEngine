@@ -1,6 +1,6 @@
 #include <iostream>
 #include "src/graphics/Window.h"
-#include "src/math/Vec2.h"
+#include "src/math/Math_headers.h"
 
 int main() {
 	//testing

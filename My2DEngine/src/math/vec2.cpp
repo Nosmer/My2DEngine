@@ -37,16 +37,34 @@ namespace MyEngine {
 			stream << "vec2: " << vector.x << ", " << vector.y;
 			return stream;
 		}
-		vec2& operator+(vec2& left, const vec2& right) {
+		vec2 operator+(vec2 left, const vec2& right) {
 			return left.add(right);
 		}
-		vec2& operator-(vec2& left, const vec2& right) {
+		vec2 operator-(vec2 left, const vec2& right) {
 			return left.sub(right);
 		}
-		vec2& operator*(vec2& left, const vec2& right) {
+		vec2 operator*(vec2 left, const vec2& right) {
 			return left.mul(right);
 		}
-		vec2& operator/(vec2& left, const vec2& right) {
+		vec2 operator/(vec2 left, const vec2& right) {
 			return left.div(right);
+		}
+		vec2& vec2::operator+=(const vec2& other) {
+			return add(other);
+		}
+		vec2& vec2::operator-=(const vec2& other) {
+			return sub(other);
+		}
+		vec2& vec2::operator*=(const vec2& other) {
+			return mul(other);
+		}
+		vec2& vec2::operator/=(const vec2& other) {
+			return div(other);
+		}
+		bool vec2::operator==(const vec2& other) {
+			return x == other.x && y == other.y;
+		}
+		bool vec2::operator!=(const vec2& other) {
+			return !(*this == other);
 		}
 } }
