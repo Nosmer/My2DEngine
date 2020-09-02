@@ -10,4 +10,4 @@ namespace MyEngine {
 			return (float)(degrees * (SP_PI / 180.0f));
 		}
 
-	}}
+}}
