@@ -32,6 +32,7 @@ namespace MyEngine {
 		bool isMousePressed(unsigned int button) const;
 		void getMousePosition(double &x, double &y) const;
 
+		void clear();
 		void update();
 		~Window();
 	};
