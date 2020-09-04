@@ -4,7 +4,7 @@
 
 namespace MyEngine {
 	
-	inline std::string read_file(const char* filepath){
+	inline std::string read_file(const char* filepath) {
 
 		FILE* file = fopen(filepath, "rt");
 		fseek(file, 0, SEEK_END);
