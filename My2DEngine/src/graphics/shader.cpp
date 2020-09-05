@@ -64,26 +64,26 @@ namespace MyEngine {
 			glDeleteShader(fragment);
 		}
 
-		GLint Shader::getUniformLocation(GLchar* name) {
+		GLint Shader::getUniformLocation(const GLchar* name) {
 			return glGetUniformLocation(m_ShaderID, name);
 		}
 
-		void Shader::setUniformFloat(GLchar* name, float value) {
+		void Shader::setUniformFloat(const GLchar* name, float value) {
 			glUniform1f(getUniformLocation(name), value);
 		}
-		void Shader::setUniformInt(GLchar* name, int value) {
+		void Shader::setUniformInt(const GLchar* name, int value) {
 			glUniform1i(getUniformLocation(name), value);
 		}
-		void Shader::setUniformVec2(GLchar* name, const math::vec2& vector) {
+		void Shader::setUniformVec2(const GLchar* name, const math::vec2& vector) {
 			glUniform2f(getUniformLocation(name), vector.x, vector.y);
 		}
-		void Shader::setUniformVec3(GLchar* name, const math::vec3& vector) {
+		void Shader::setUniformVec3(const GLchar* name, const math::vec3& vector) {
 			glUniform3f(getUniformLocation(name), vector.x, vector.y, vector.z);
 		}
-		void Shader::setUniformVec4(GLchar* name, const math::vec4& vector) {
+		void Shader::setUniformVec4(const GLchar* name, const math::vec4& vector) {
 			glUniform4f(getUniformLocation(name), vector.x, vector.y, vector.z, vector.w);
 		}
-		void Shader::setUniformMat4(GLchar* name, const math::mat4& matrix) {
+		void Shader::setUniformMat4(const GLchar* name, const math::mat4& matrix) {
 			glUniformMatrix4fv(Shader::getUniformLocation(name), 1, GL_FALSE, matrix.elements);
 		}
 
